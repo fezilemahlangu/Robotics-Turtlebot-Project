@@ -22,7 +22,7 @@ rosservice call /gazebo/get_model_state "model_name: 'mobile_base'"
 - localize robot in the map
 - get proper map
 
-
+Install scipy: pip install scipy==0.16
 ## **To create map:**
 Always source devel/setup.bash
 
