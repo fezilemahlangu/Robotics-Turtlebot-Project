@@ -140,13 +140,13 @@ class Node:
                str(self.cost) 
                
 def changeToWorldCoords(r,c):
-    y=6.381-(r*0.0341)
-    x=12.504-(c*0.0341)
+    y=12.1355-(c*0.033563)
+    x=6.37504-(r*0.033563)
     return x,y
 
 def changeToPixelCoords(x,y):
-    c=round((6.381-x)/0.0341)
-    r=round((12.504-y)/0.0341)
+    c=round((12.1355-y)/0.033563)
+    r=round((6.37504-x)/0.033563)
     return r,c
 
 def prm_planning(start_x, start_y, goal_x, goal_y,
@@ -394,18 +394,20 @@ def main(rng=None):
     # USED THESE FOR TESTING WITH REAL WORLD CO ORDS
     # CAN COMMENT THESE OUT AND UNCOMMENT THE INPUT() LINES ABOVE-> REPLACE SX AND SY WITH CURR BOT POS
     # GX GY CAN BE ANY CO ORD THE BOT CAN REACH
-    sx= 0.167359393699
-    sy= -0.0225131121689
+    sx= 4.73219831575
+    sy=4.08815854895
 
-    gx=0.573735150919
-    gy=7.15337340459
+    gx=3.78583484097
+
+    gy=6.65431327362
 
 
     #have to change to pixel co ords
 
     sx,sy=changeToPixelCoords(sx,sy)
     gx,gy=changeToPixelCoords(gx,gy)
-    print(sx,sy,gx,gy)
+    print('Start co-ords in pixel co-ords:',sx,sy)
+    print('Goal co-ords in pixel co-ords',gx,gy)
 
     robot_size = 5.0  # [m]
 
@@ -459,8 +461,8 @@ def main(rng=None):
     return (finalpath)
 
 if __name__ == '__main__':
-    # path=main()
+    path=main()
     # testing PID
-    path=[[ 6.707 ,1.0273]]
-    bot = Turtlebot()
-    bot.updateMove(path)
+    # path=[[ 6.707 ,1.0273]]
+    # bot = Turtlebot()
+    # bot.updateMove(path)
