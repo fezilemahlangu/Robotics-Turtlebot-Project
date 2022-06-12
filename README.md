@@ -52,7 +52,7 @@ rosrun map_server map_saver -f <your map name>
   This should generate a yaml and pgm
   
 ## ** Running Instructions
-### To Run Motion Planning And Navigation**
+### To Run Motion Planning And Navigation
 * In /robot_assignment_ws
 ``` rm -r build ```
 * Change script permisions
