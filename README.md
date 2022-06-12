@@ -44,14 +44,14 @@ roslaunch kobuki_keyop safe_keyop.launch --screen
 
 Alter laser scan area in rviz
 
-## **Saving map file-**
+## **Saving map file**
 
 ```
 rosrun map_server map_saver -f <your map name>
 ```
   This should generate a yaml and pgm
   
-## ** Running Instructions **
+### ** Running Instructions **
 ### To Run Motion Planning And Navigation
 * In /robot_assignment_ws
 ``` rm -r build ```
